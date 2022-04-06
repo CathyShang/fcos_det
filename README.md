@@ -1,20 +1,20 @@
 # 任务
-自动驾驶任务中的无锚框目标检测，要求模型需要具有实时性
+遥感图像目标检测
 
 # 数据集
-- KITTI (2D/3D)
-    [[download](http://www.cvlibs.net/datasets/kitti/) 
-    / [paper](https://arxiv.org/abs/1803.09719)] (2011)
-    - 3D物体检测类别：汽车、货车、卡车、行人、自行车、电车、其他
-- SODA10M (2D)
-    [[download](https://soda-2d.github.io/download.html)
-    / [paper](https://arxiv.org/pdf/2106.11118.pdf)] (2021)
-    - 2万张有标签图片`5.6G`, 1000万张无标签图片`2T`
-    - 6种类别：行人、自行车、汽车、卡车、电车、三轮车
-    - 地平线保持在图像的中心，车内的遮挡不超过整个图像的15%
-    - 提供者：华为诺亚方舟实验室&中山大学
+- NWPU VHR-10
+    - 包含10类正例样本650张以及不包含给定对象类的任何目标的150张反例图像（背景），正例图像中至少包含1个实例，总共有3651个目标实例
 
+- LEVIR
+    - 数据集包含21952幅遥感图像和11028个实例
+    - 图片尺寸为600*800
+    - 数据集中的实例分为3个类别：飞机、船舶、储油罐，其中，飞机实例有4724个、轮船实例有3025个、储油罐实例有3279个
 
 # 评价指标
 - AP
 - FLOPs
+
+
+### 参考文献
+1. G. Cheng, P. Zhou, and J. Han. Learning rotation-invariant convolutional neural networks for object detection in VHR optical remote sensing images. IEEE Trans. Geosci. Remote Sens., 54(12):7405–7415,2016.
+2. Z. Zou, Z. Shi. Random Access Memories: A New Paradigm for Target Detection in High Resolution Aerial Remote Sensing Images. IEEE Transactions on Image Processing, 27(3), 1100–1111, 2018
